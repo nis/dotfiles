@@ -1,0 +1,30 @@
+[submodule "Vim/.vim/bundle/command-t"]
+	path = Vim/.vim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule "Vim/.vim/bundle/jedi-vim"]
+	path = Vim/.vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "Vim/.vim/bundle/lightline.vim"]
+	path = Vim/.vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "Vim/.vim/bundle/supertab"]
+	path = Vim/.vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "Vim/.vim/bundle/vim-autopep8"]
+	path = Vim/.vim/bundle/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8.git
+[submodule "Vim/.vim/bundle/vim-colors-solarized"]
+	path = Vim/.vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "Vim/.vim/bundle/vim-flake8"]
+	path = Vim/.vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
+[submodule "Vim/.vim/bundle/vim-fugitive"]
+	path = Vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "Vim/.vim/bundle/vim-gitgutter"]
+	path = Vim/.vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "Vim/.vim/bundle/vim-sensible"]
+	path = Vim/.vim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
