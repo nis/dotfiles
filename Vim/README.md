@@ -28,6 +28,6 @@ mv ~/.viminfo ~/.viminfoBAK
 
 Make links to the new stuff:
 ```
-ln -s .vim ~/.vim
-ln -s .vimrc ~/.vimrc
+ln -s ~/Documents/dotfiles/Vim/.vim ~/.vim
+ln -s ~/Documents/dotfiles/Vim/.vimrc ~/.vimrc
 ```
