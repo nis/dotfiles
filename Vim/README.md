@@ -20,10 +20,14 @@ Make sure the python3-config-dir is the right one.
 ## Moving in on a new system
 Clone the repository.
 Move the old stuff out of the way:
-`mv ~/.vim ~/.vimBAK
+```
+mv ~/.vim ~/.vimBAK
 mv ~/.vimrc ~/.vimrcBAK
-mv ~/.viminfo ~/.viminfoBAK`
+mv ~/.viminfo ~/.viminfoBAK
+```
 
 Make links to the new stuff:
-`ln -s .vim ~/.vim
-ln -s .vimrc ~/.vimrc`
+```
+ln -s .vim ~/.vim
+ln -s .vimrc ~/.vimrc
+```
