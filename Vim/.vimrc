@@ -14,7 +14,7 @@ set spelllang=en,da
 set spell
 
 " Run python
-nnoremap <silent> <F5> :!clear;python %<CR>
+nnoremap <silent> <F1> :w<CR>:!clear;python %<CR>
 
 " Leader
 let mapleader=" "
