@@ -47,6 +47,8 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+export PATH=/home/nis/anaconda3/bin:$PATH
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -88,4 +90,3 @@ alias 1pw='wine "C:\Program Files (x86)\1Password 4\1Password.exe"'
 alias 1ph='wine "C:\Program Files (x86)\1Password 4\Agile1pAgent.exe"'
 alias subt='subliminal download -l en /mnt/Data/Media/'
 
-export PATH=/home/nis/anaconda3/bin:$PATH
