@@ -31,3 +31,6 @@
 [submodule "Zsh/.zsh/zsh-autosuggestions"]
 	path = Zsh/.zsh/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "Zsh/.zsh/.oh-my-zsh"]
+	path = Zsh/.zsh/.oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
