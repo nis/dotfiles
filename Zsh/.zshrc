@@ -53,7 +53,7 @@ export PATH=/home/nis/anaconda3/bin:$PATH
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper safe-paste zsh-autosuggestions)
+plugins=(git virtualenvwrapper safe-paste)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,3 +90,4 @@ alias 1pw='wine "C:\Program Files (x86)\1Password 4\1Password.exe"'
 alias 1ph='wine "C:\Program Files (x86)\1Password 4\Agile1pAgent.exe"'
 alias subt='subliminal download -l en /mnt/Data/Media/'
 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
