@@ -91,3 +91,5 @@ alias 1ph='wine "C:\Program Files (x86)\1Password 4\Agile1pAgent.exe"'
 alias subt='subliminal download -l en /mnt/Data/Media/'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export PATH=/home/nis/bin:$PATH
