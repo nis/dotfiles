@@ -93,3 +93,5 @@ alias subt='subliminal download -l en /mnt/Data/Media/'
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH=/home/nis/bin:$PATH
+
+source ~/.zsh/aliases
