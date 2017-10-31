@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 " fzf plugin
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -13,4 +14,7 @@ call plug#end()
 nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
+nmap <Leader>a :Ag<CR>
 
+" Tell ack.vim to use ag (the Silver Searcher) instead
+let g:ackprg = 'ag --vimgrep'
