@@ -2,3 +2,79 @@ start_backtester() {
 	cd ~/Documents/Backtester/
 	source activate
 }
+
+start_krakentrader() {
+	cd ~/Documents/KrakenTrader/
+	source activate
+}
+
+zcashMinerGpu() {
+	/home/nis/Documents/Miners/Zec\ miner\ 0.3.3b\ Linux\ Bin/miner --server eu1-zcash.flypool.org --user t1MgxMdYg8pnQicGTxQiGhD8FGUVqeDgAnK.1080TI --port 3333 --pass x --cuda_devices 0
+}
+
+zcashMinerCpu() {
+	~/bin/nheqminer_cpu -l eu1-zcash.flypool.org:3333 -u t1MgxMdYg8pnQicGTxQiGhD8FGUVqeDgAnK.home1 -t 6
+}
+
+cgMiner() {
+	sudo cgminer -o stratum+tcp://solo.ckpool.org:3333 -u 1Fb7yECWFZ31SxPJSnU9xWjKbZptDZNeFE -p x
+}
+
+gethSession() {
+	tmux new -d -s gethShell
+	tmux send-keys -t gethShell geth  C-m
+	tmux detach -s gethShell
+}
+
+fetchSession() {
+	tmux new -d -s fetchShell
+	tmux send-keys -t fetchShell "python /home/nis/Documents/KrakenTrader/Kraken/fetch_trades.py" C-m
+	tmux detach -s fetchShell
+}
+
+1phsession() {
+	tmux new -d -s 1password
+	tmux send-keys -t 1password 1ph C-m
+	tmux detach -s 1password
+}
+
+zsession() {
+	tmux new -d -s Zcash
+	tmux send-keys -t Zcash zcashMinerGpu C-m
+	tmux detach -s Zcash
+}
+
+cgsession() {
+	tmux new -d -s cgMiner
+	tmux send-keys -t cgMiner cgMiner C-m
+	tmux detach -s cgMiner
+}
+
+minesignatum() {
+	export GPU_FORCE_64BIT_PTR=0
+	export GPU_MAX_HEAP_SIZE=100
+	export GPU_USE_SYNC_OBJECTS=1
+	export GPU_MAX_ALLOC_PERCENT=100
+	export GPU_SINGLE_ALLOC_PERCENT=100
+	/mnt/Data/Coins/Signatum/Miner/ccminer/ccminer -o stratum+tcp://sigt.pool.mn:8732 -u nissarup.cuda -p x -a skunk
+}
+sigstartsession() {
+	tmux new -d -s Signatum
+	tmux send-keys -t Signatum minesignatum C-m
+	tmux detach -s Signatum
+}
+
+startall() {
+	print "Starting 1Password helper..."
+	1phsession
+	print "Starting cgMiner..."
+	cgsession
+	print "Starting ZCash GPU Miner..."
+	zsession
+	print "Starting Geth..."
+	gethSession
+	print "Starting Cointrade fetcher..."
+	fetchSession
+	print "Jobs done!"
+}
+

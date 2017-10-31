@@ -95,3 +95,11 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=/home/nis/bin:$PATH
 
 source ~/.zsh/aliases
+
+export PATH=/usr/local/cuda/bin:$PATH:/usr/local/cuda-8.0/:/usr/local/cuda-8.0/bin
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64:/usr/local/cuda-8.0/lib64/stubs
+
+export TERMINAL=termite
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
