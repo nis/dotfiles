@@ -7,6 +7,7 @@ Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
