@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -18,3 +19,7 @@ nmap <Leader>a :Ag<CR>
 
 " Tell ack.vim to use ag (the Silver Searcher) instead
 let g:ackprg = 'ag --vimgrep'
+
+" ALE settings
+let g:ale_sign_error = '!'
+let g:ale_sign_warning = '?'
