@@ -10,6 +10,7 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
