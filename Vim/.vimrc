@@ -9,6 +9,7 @@ Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 
 " Initialize plugin system
 call plug#end()
