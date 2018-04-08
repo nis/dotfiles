@@ -4,7 +4,11 @@ start_krakentrader() {
 }
 
 zcashMinerGpu() {
-	/home/nis/Documents/Miners/Zec\ miner\ 0.3.3b\ Linux\ Bin/miner --server eu1-zcash.flypool.org --user t1MgxMdYg8pnQicGTxQiGhD8FGUVqeDgAnK.1080TI --port 3333 --pass x --cuda_devices 0
+	 /mnt/Data/Coins/Zcash/Miners/0.3.4b/zcashminer -fee 0 --server eu1-zcash.flypool.org --user t1MgxMdYg8pnQicGTxQiGhD8FGUVqeDgAnK.1080TI --port 3333 --pass x --cuda_devices 0
+}
+
+zenMinerGpu() {
+	 /mnt/Data/Coins/Zcash/Miners/zm_0.5.8/zm --server zen.suprnova.cc --user nissarup.1080TI --port 3618 --time -telemetry
 }
 
 zcashMinerCpu() {
@@ -12,12 +16,19 @@ zcashMinerCpu() {
 }
 
 cgMiner() {
-	sudo cgminer -o stratum+tcp://solo.ckpool.org:3333 -u 1Fb7yECWFZ31SxPJSnU9xWjKbZptDZNeFE -p x
+	sudo cgminer -o stratum+tcp://solo.ckpool.org:3334 -u 3L8ime5BSzHgki6wb2otUvto1XErJZyB3n -p x --au3-volt 825 --au3-freq 225 --gekko-2pac-freq 100
+}
+
+1psession() {
+	tmux new -d -s 1pShell 
+	tmux send-keys -t 1pShell "wine ~/.wine/drive_c/Program\ Files\ \(x86\)/1Password\ 4/1Password.exe"  C-m
+	tmux detach -s 1pShell
+	
 }
 
 gethSession() {
 	tmux new -d -s gethShell
-	tmux send-keys -t gethShell geth  C-m
+	tmux send-keys -t gethShell "geth --fast --cache=8192"  C-m
 	tmux detach -s gethShell
 }
 
@@ -36,7 +47,11 @@ fetchSession() {
 zsession() {
 	tmux new -d -s Zcash
 	tmux send-keys -t Zcash zcashMinerGpu C-m
-	tmux detach -s Zcash
+}
+
+zensession() {
+	tmux new -d -s ZenSession
+	tmux send-keys -t ZenSession zenMinerGpu C-m
 }
 
 cgsession() {
@@ -64,12 +79,10 @@ startall() {
 	1phsession
 	print "Starting cgMiner..."
 	cgsession
-	print "Starting ZCash GPU Miner..."
-	zsession
-	print "Starting Geth..."
-	gethSession
 	print "Starting Cointrade fetcher..."
 	fetchSession
+	print "Starting PulseAudio..."
+	pulseaudio -D
 	print "Jobs done!"
 }
 
